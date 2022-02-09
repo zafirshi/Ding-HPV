@@ -1,0 +1,29 @@
+name: DingHPV-scratch
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+  schedule:
+    - cron: 0,30 0-14 * * *
+
+jobs:
+  scratch:
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Python
+        run: sudo apt update && sudo apt install python3
+
+      - name: requirements
+        run: pip3 install -r requirements.txt
+
+      - name: Run
+        run: python3 main.py
+        env:
+          notice_robot: ${{secrets.notice_robot}}
+          link_robot: ${{secrets.link_robot}}
