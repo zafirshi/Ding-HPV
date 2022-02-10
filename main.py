@@ -88,9 +88,9 @@ if __name__ == '__main__':
     sleep = 1800    # 爬取间隔时间
 
     # Todo: 获取机器人ID
-    dingtalk_token1 = '4cf08e7a1f38b50704e1d0899999f4380625868624ba8ab891be6393abcb0d4e'    # notice_robot
-    dingtalk_token2 = 'e0103198f33733fc61eebfb1a0b54cffc3c9beb0f45ac7804da47e9f40efaa8d'    # link_robot
-    dingtalk_token3 = '0e02150d02768a587b71dfc7e022019914731bb0f0c6f416faeacf33064c606d'    # error_robot
+    dingtalk_token1 = ''    # notice_robot
+    dingtalk_token2 = ''    # link_robot
+    dingtalk_token3 = ''    # error_robot
 
     # 部分机器人初始化
     notice_robot = Ding_Robot(dingtalk_token1, msg='HPV疫苗更新啦！速抢！')
