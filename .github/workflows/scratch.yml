@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [ dev ]
   schedule:
-    - cron: 0,30 0-14 * * *
+    - cron: 0,30 0-14 * * 0-6
 
 jobs:
   scratch:
